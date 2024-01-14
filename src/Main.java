@@ -79,7 +79,7 @@ public class Main {
         //Небольшая справка: високосным является каждый четвертый год, но не является каждый сотый.
         //Также високосным является каждый четырехсотый год.
         int year = 2024;
-        if (year % 4 == 0 || year % 100 != 0  || year % 400 == 0 ){
+        if ((year % 4 == 0 && year % 100 != 0) || year % 400 == 0 ){  // поставила скобки в первом выражение
             System.out.println(year + " год является высокосным");
         }else{
             System.out.println(year+ " год не является высокосным");
@@ -152,6 +152,33 @@ public class Main {
                 break;
             default:
                 System.out.println("!Укажите месец от 1 до 12!");
+        }
+        // второй вариант, типа сокращенный
+        int mobthNumber1 = 12;
+        switch (mobthNumber1){
+            case 12:
+            case 1:
+            case 2:
+
+                    System.out.println("Зима");
+                break;
+            case 3:
+            case 4:
+            case 5:
+                System.out.println("Веснв");
+                break;
+            case 6:
+            case 7:
+            case 8:
+                    System.out.println("Лето");
+                    break;
+            case 9:
+            case 10:
+            case 11:
+                System.out.println("Осень");
+                break;
+            default:
+                System.out.println("Неверный месяц");
         }
 
 
